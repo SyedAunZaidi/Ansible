@@ -31,8 +31,9 @@
     dnf:
       name: http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
       state: present
+      disable_gpg_check: yes
   - name: Install mysql-server
-    dnf:
+    yum:
       name: mysql-server
       state: present
   - name: Override variables for MySQL (RedHat).
